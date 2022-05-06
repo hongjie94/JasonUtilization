@@ -23,7 +23,7 @@ const majorDatas = require('./majorDatas.json');
 const dialog_nodes =(data.dialog_nodes);
 // console.log(data2.length); // 9 + 26 + 22 + 3 +1 = 61
 
- dialog_nodes.forEach(node  => {
+ dialog_nodes.map(node  => {
   majorDatas.forEach(majorData => {
     if (majorData.title === node.title) {
       const nodeIndex = dialog_nodes.indexOf(node);
@@ -228,21 +228,18 @@ const dialog_nodes =(data.dialog_nodes);
         "previous_sibling": academicMaps_dialogNode  //academicMaps_dialogNode,
       };
 
-      
-      
-      dialog_nodes.push(majorOutput);
+      dialog_nodes[nodeIndex] = majorOutput;
       dialog_nodes.push(careerMaps);
       dialog_nodes.push(jumpToAcademicMaps);
       dialog_nodes.push(academicMaps);
       dialog_nodes.push(jumpToCaeerMap);
       dialog_nodes.push(No);
-      
     } 
   }); 
 });
 
 
-writeJson('newDtad.json', data, (err) => {
+writeJson('newData.json', data, (err) => {
   if(err) {
     console.log(err);
   } else {
