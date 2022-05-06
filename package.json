@@ -1,0 +1,15 @@
+{
+  "name": "data_intergration",
+  "version": "1.0.0",
+  "description": "BMCC Academic Programs JSON file utilization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zack Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "write": "^2.0.0",
+    "write-json": "^3.0.1"
+  }
+}
